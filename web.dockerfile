@@ -1,7 +1,7 @@
 FROM nginx:1.10
 
 ADD ./vhost.conf /etc/nginx/conf.d/default.conf
-ADD ./rest_builder.conf /etc/nginx/conf.d/rest_builder.zenwel.local.conf
+# ADD ./rest_builder.conf /etc/nginx/conf.d/rest_builder.zenwel.local.conf
 
 # RUN apt-get update
 # RUN apt-get install -y \
