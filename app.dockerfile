@@ -43,4 +43,4 @@ RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /var/www/.ssh/config
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["/usr/bin/supervisord"]
 
-WORKDIR /var/www
+WORKDIR /var/www/html

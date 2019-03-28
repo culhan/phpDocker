@@ -21,4 +21,4 @@ ADD ./vhost.conf /etc/nginx/conf.d/default.conf
 
 # RUN echo "root:Docker!" | chpasswd
 
-WORKDIR /var/www
+WORKDIR /var/www/html
