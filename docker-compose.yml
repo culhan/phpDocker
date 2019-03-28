@@ -6,9 +6,12 @@ services:
       dockerfile: web.dockerfile
     volumes:
       - ./html:/var/www/html
+      - ./dh-param/dhparam-2048.pem:/etc/ssl/certs/dhparam-2048.pem
+      - /docker-volumes/etc/letsencrypt/live/khan.my.id/fullchain.pem:/etc/letsencrypt/live/khan.my.id/fullchain.pem
+      - /docker-volumes/etc/letsencrypt/live/khan.my.id/privkey.pem:/etc/letsencrypt/live/khan.my.id/privkey.pem
     ports:
       - "80:80"
-      - "8080:80"
+      - "443:443"
     links:
       - app
   
